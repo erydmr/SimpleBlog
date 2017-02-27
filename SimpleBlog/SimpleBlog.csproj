@@ -109,6 +109,7 @@
     <Content Include="packages.config" />
     <Content Include="Areas\admin\Views\web.config" />
     <Content Include="Views\Posts\Index.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
