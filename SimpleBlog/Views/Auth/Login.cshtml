@@ -1,13 +1,16 @@
 ﻿@model SimpleBlog.ViewModels.AuthLogin
 
+
 @{
     ViewBag.Title = "Login Page";
-
+    
 }
 
 
     <h1 style="color:red">Login!</h1>
 <div style="float:left">
+ @Html.ValidationSummary()
+
     @using (Html.BeginForm())
     {
         <div>

@@ -12,13 +12,25 @@ namespace SimpleBlog.Controllers
         // GET: Auth
         public ActionResult Login()
         {
-            return View();
+            return View(new AuthLogin());
         }
 
         [HttpPost]
         public ActionResult Login(AuthLogin form)
         {
-            return Content("Hi " + form.UserName + " <br>Password: " + form.Password);
+
+
+            if (!ModelState.IsValid) {
+
+                return View(form);
+            }
+           
+            if(form.UserName.Length<5)
+            {
+                ModelState.AddModelError("UserName", "en az 5 karakter");
+                return View(form);
+            }
+            return Content("Başarılı");
         }
     }
 }
