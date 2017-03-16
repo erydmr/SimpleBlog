@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace SimpleBlog.Areas.admin.Controllers
 {
+    
     public class PostsController : Controller
     {
+        [Authorize(Roles ="admin")]
         // GET: admin/Posts
         public ActionResult Index()
         {
